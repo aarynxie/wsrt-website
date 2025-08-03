@@ -1,0 +1,99 @@
+.herocontainer {
+    background-color: black;
+    background-image: url("./assets/home bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.herotextcontainer {
+    display: flex;
+    justify-content: center;
+    max-width: 80vw;
+    flex-direction: column;
+    padding: 5rem;
+    gap: 1rem;
+    border-radius: 120px 120px 0 0;
+    background: linear-gradient(180deg, #040410 0%, rgba(75, 75, 108, 0.30) 100%);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    color: var(--text-color);
+    font-family: var(--header-font-family);
+    font-size: clamp(0.75rem, 3.5vw + 0.75rem, 4rem);
+    max-width: 600px;
+    line-height: 100%;
+    margin: 0;
+}
+
+
+.projectsbutton {
+    display: inline-block;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 2px solid #FFF;
+    background-color: transparent;
+    width: fit-content;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-family: inherit;
+    font-weight: var(--header-font-weight);
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+
+.projectsbutton:hover {
+    box-shadow: 0 0 10px 0 #E168FF, 0 0 15px 0 #E168FF;
+    mix-blend-mode: linear_dodge;
+}
+
+.overlaysun {
+    position: absolute;
+    background-color: white;
+    width: 100vw;
+    height: 100vw;
+    top: 50vh;
+    left: 60vw;
+    border-radius: 2177px;
+    background: radial-gradient(50% 50% at 50% 50%, #EAEAEA 78.63%, rgba(115, 115, 115, 0.00) 100%);
+    mix-blend-mode: linear_dodge;
+}
+
+.projectscontainer {
+    background-color: blue;
+    min-height: 500px;
+}
+
+@media (min-width: 1000px) {
+    .herotextcontainer {
+        max-width: 70vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .herotextcontainer {
+        max-width: 60vw;
+    }
+}
+
+@media (min-width: 1500px) {
+    .herotextcontainer {
+        max-width: 50vw;
+        padding-bottom: 20vh;
+    }
+
+
+    .overlaysun {
+        left: 40vw;
+    }
+}

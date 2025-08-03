@@ -11,17 +11,31 @@
   box-sizing: border-box;
 }
 
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
 
 #root {
   --text-color: white;
+  --header-font-family: "Readex Pro", Avenir, Helvetica, Arial, sans-serif;
+  --header-font-size: 3.5rem;
+  --header-font-weight: 600;
+}
+
+nav {
+  top: 0;
+  position: fixed;
+  z-index: 10;
+  backdrop-filter: blur(15px);
 }
 
 .navbar {
-  background-color: black;
   width: 100vw;
   display: flex;
   align-items: center;
-  padding: 30px 60px;
+  padding: 20px 60px;
+  background: linear-gradient(180deg, #040410 0%, rgba(75, 75, 108, 0) 100%);
 }
 
 #navbar-logo {
@@ -32,18 +46,13 @@
   color: var(--text-color);
 }
 
-
-.box {
-  flex-grow: 1;
-  max-width: 300px;
-  height: 200px;
-  width: 200px;
-  background-color: aquamarine;
-  font-size: 40pt;
+.navbar-links {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  gap: 40px;
 }
+
+
 
 /* .logo {
   height: 6em;
