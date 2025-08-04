@@ -49,8 +49,16 @@ export default function Home() {
           </div>
           <div className={styles.footerlinks}>
             <a href="mailto:uwspaceresearchteam@gmail.com">Email</a>
-            <a href="https://www.instagram.com/uwspaceresearch/">Instagram</a>
-            <a href="https://www.linkedin.com/company/uw-space-research/">
+            <a
+              href="https://www.instagram.com/uwspaceresearch/"
+              target="_blank"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://www.linkedin.com/company/uw-space-research/"
+              target="_blank"
+            >
               LinkedIn
             </a>
           </div>
