@@ -18,11 +18,13 @@
     justify-content: center;
     max-width: 80vw;
     flex-direction: column;
-    padding: 5rem;
+    padding: 3rem;
     gap: 1rem;
     border-radius: 120px 120px 0 0;
     background: linear-gradient(180deg, #040410 0%, rgba(75, 75, 108, 0.30) 100%);
     backdrop-filter: blur(10px);
+    font-size: 0.75rem;
+    padding-bottom: 20vw;
 }
 
 h1 {
@@ -70,13 +72,186 @@ h1 {
 }
 
 .projectscontainer {
+    background-image: url("./assets/projects bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 70vh;
+    display: flex;
+    padding: 3rem 2rem;
+    flex-wrap: wrap;
+    align-items: stretch;
+    color: var(--text-color);
+}
+
+
+.projectsheader {
+    flex: 1 0 auto;
+    padding: 1rem 2rem;
+    align-self: stretch;
+}
+
+.projectsheader h1 {
+    text-align: center;
+}
+
+.projectscontent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 40vw;
+    align-self: auto;
+    height: auto;
+}
+
+.projectscontent h2 {
+    font-size: clamp(0.75rem, 3.5vw + 0.75rem, 2.5rem);
+    line-height: 80%;
+
+    background: linear-gradient(90deg, #FCA5FF 0%, #9B44E7 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    mix-blend-mode: plus-lighter;
+}
+
+.projectscontenttopbox {
+
+    flex: 2 0 auto;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    background-image: url("./assets/astra bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition-duration: 200ms;
+}
+
+.projectscontenttopbox:hover {
+    box-shadow: 0 0 10px 0 #E168FF, 0 0 15px 0 #E168FF;
+    mix-blend-mode: linear_dodge;
+}
+
+.projectscontenttopbox p {
+    align-self: flex-end;
+}
+
+.projectscontenttopbox img {
+    max-width: 100%;
+    /* prevents overflow */
+    height: auto;
+    /* maintain aspect ratio */
+    display: block;
+    /* removes bottom spacing */
+    mix-blend-mode: plus-lighter;
+}
+
+.projectscontentbottombox {
+    flex: 1 1 0%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.projectscontentbottomleft {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-image: url("./assets/wsst bg.png");
+}
+
+.projectscontentbottomleft:hover,
+.projectscontentbottomright:hover {
+    box-shadow: 0 0 10px 0 #E168FF, 0 0 15px 0 #E168FF;
+    mix-blend-mode: linear_dodge;
+}
+
+.projectscontentbottomright {
+    background-image: url("./assets/all projects bg.png");
+
+}
+
+.projectscontentbottomleft,
+.projectscontentbottomright {
+    flex: 1 1 0%;
+    border-radius: 2rem;
+    padding: 2rem 2rem;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition-duration: 200ms;
+}
+
+.projectscontentbottomleft p,
+h2 {
+    margin: 0;
+}
+
+.footer {
     background-color: blue;
-    min-height: 500px;
+    color: var(--text-color);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footertext {
+    border: 2px solid white;
+}
+
+.footerlinks {
+    border: 2px solid cyan;
+    display: flex;
+    flex-direction: column;
+}
+
+.footertext,
+.footerlinks {
+    flex: 1 0 100%;
+    box-sizing: border-box;
+    /* include padding/border in width */
+}
+
+@media (min-width: 626px) {
+    .projectsheader h1 {
+        text-align: left;
+    }
 }
 
 @media (min-width: 1000px) {
     .herotextcontainer {
         max-width: 70vw;
+        font-size: 1rem;
+        padding: 5rem;
+    }
+
+    .projectscontainer {
+        padding: 5rem 8rem;
+        min-height: 105vh;
+    }
+
+    .projectsheader {
+        flex: 0 0 30%;
+        padding: 0 2rem;
+    }
+
+    .projectscontentbottombox {
+        flex-direction: row;
+    }
+
+    .projectscontentbottomleft {
+        flex-wrap: nowrap;
+        gap: 1rem;
     }
 }
 
@@ -89,7 +264,6 @@ h1 {
 @media (min-width: 1500px) {
     .herotextcontainer {
         max-width: 50vw;
-        padding-bottom: 20vh;
     }
 
 
