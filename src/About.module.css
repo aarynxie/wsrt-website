@@ -95,6 +95,7 @@
 @media (min-width: 1000px) {
     .title {
         padding: 2rem 8rem;
+        min-height: 100vh;
     }
 
     .title p {

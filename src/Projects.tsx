@@ -4,10 +4,12 @@ export default function Projects() {
   return (
     <>
       <div className={styles.projectscontainer}>
-        <h1>Projects</h1>
-        <p>
-          Take a closer look at the projects we've been working on since 2024.
-        </p>
+        <div className={styles.projectstitle}>
+          <h1>Projects</h1>
+          <p>
+            Take a closer look at the projects we've been working on since 2024.
+          </p>
+        </div>
         <div className={styles.allprojectscontainer}>
           <div
             className={styles.astracontainer}
@@ -22,7 +24,10 @@ export default function Projects() {
               <p>CAN-SBX 7</p>
             </div>
           </div>
-          <div className={styles.wsstcontainer} id="singleprojectcontainer">
+          <div
+            className={styles.wsstcontainer}
+            id={styles.singleprojectcontainer}
+          >
             <div className={styles.containerleft}>
               <h1>WSST</h1>
               <p>Waterloo Space Soldering Team</p>
