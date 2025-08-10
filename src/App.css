@@ -18,6 +18,7 @@ a {
 
 #root {
   --text-color: white;
+  --text-color-dark: #2C2634;
   --header-font-family: "Readex Pro", Avenir, Helvetica, Arial, sans-serif;
   --header-font-size: 3.5rem;
   --header-font-weight: 600;
@@ -34,7 +35,7 @@ nav {
   width: 100vw;
   display: flex;
   align-items: center;
-  padding: 20px 60px;
+  padding: 0.5rem 3rem;
   background: linear-gradient(180deg, #040410 0%, rgba(75, 75, 108, 0) 100%);
 }
 
@@ -44,6 +45,7 @@ nav {
 
 .navbar-link {
   color: var(--text-color);
+  transition-duration: 200ms;
 }
 
 .navbar-links {
@@ -52,6 +54,9 @@ nav {
   gap: 40px;
 }
 
+.navbar-link:hover {
+  color: #DA7CE8;
+}
 
 
 /* .logo {

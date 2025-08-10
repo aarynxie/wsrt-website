@@ -1,6 +1,8 @@
 import styles from "./Home.module.css";
 import astraText from "./assets/uw astra title.svg";
 
+import Footer from "./footer.tsx";
+
 export default function Home() {
   return (
     <>
@@ -12,13 +14,13 @@ export default function Home() {
             dedicated to advancing aerospace research through hands-on design
             and engineering competitions.
           </p>
-          <a className={styles.projectsbutton} href="/projects">
+          <a className={styles.projectsbutton} href="#projects">
             See our Projects
           </a>
         </div>
         <div className={styles.overlaysun}></div>
       </div>
-      <div className={styles.projectscontainer}>
+      <div className={styles.projectscontainer} id="projects">
         <div className={styles.projectsheader}>
           <h1>Our Projects</h1>
         </div>
@@ -38,36 +40,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={styles.footer}>
-        <div className={styles.footertop}>
-          <div className={styles.footertext}>
-            <h2>Let's connect</h2>
-            <p>
-              Whether you're a student, sponsor, or just curious, don’t hesitate
-              to reach out!
-            </p>
-          </div>
-          <div className={styles.footerlinks}>
-            <a href="mailto:uwspaceresearchteam@gmail.com">Email</a>
-            <a
-              href="https://www.instagram.com/uwspaceresearch/"
-              target="_blank"
-            >
-              Instagram
-            </a>
-            <a
-              href="https://www.linkedin.com/company/uw-space-research/"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-          </div>
-        </div>
-        <div className={styles.footerbottom}>
-          <p>Made with 💜 in Waterloo, ON</p>
-          <small>© Waterloo Space Research Team 2025</small>
-        </div>
-      </div>
+      <Footer />
     </>
   );
 }
