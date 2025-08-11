@@ -3,14 +3,13 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 :root {
   font-family: Montserrat, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
-
 
   text-rendering: optimizeLegibility;
   /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

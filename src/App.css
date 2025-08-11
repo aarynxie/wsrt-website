@@ -17,7 +17,7 @@ a {
 }
 
 #root {
-  --text-color: white;
+  --text-color: #F2F0F5;
   --text-color-dark: #2C2634;
   --header-font-family: "Readex Pro", Avenir, Helvetica, Arial, sans-serif;
   --header-font-size: 3.5rem;

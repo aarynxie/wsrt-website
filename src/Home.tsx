@@ -3,6 +3,8 @@ import astraText from "./assets/uw astra title.svg";
 
 import Footer from "./footer.tsx";
 
+import { Link } from "react-router-dom";
+
 export default function Home() {
   return (
     <>
@@ -14,7 +16,11 @@ export default function Home() {
             dedicated to advancing aerospace research through hands-on design
             and engineering competitions.
           </p>
-          <a className={styles.projectsbutton} href="#projects">
+          <a
+            className={styles.projectsbutton}
+            href="#projects"
+            onClick={handleAnchorClick}
+          >
             See our Projects
           </a>
         </div>
@@ -26,8 +32,10 @@ export default function Home() {
         </div>
         <div className={styles.projectscontent}>
           <div className={styles.projectscontenttopbox}>
-            <img src={astraText}></img>
-            <p>Adaptive Signal Transmission and Real-time Analytics</p>
+            <Link to="/projects/astra">
+              <img src={astraText}></img>
+              <p>Adaptive Signal Transmission and Real-time Analytics</p>
+            </Link>
           </div>
           <div className={styles.projectscontentbottombox}>
             <div className={styles.projectscontentbottomleft}>
@@ -43,4 +51,14 @@ export default function Home() {
       <Footer />
     </>
   );
+}
+
+function handleAnchorClick(e: React.MouseEvent<HTMLAnchorElement>) {
+  // enable smooth scroll
+  document.documentElement.style.scrollBehavior = "smooth";
+
+  // after the scroll finishes (~500ms), turn it back off
+  setTimeout(() => {
+    document.documentElement.style.scrollBehavior = "auto";
+  }, 500);
 }
