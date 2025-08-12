@@ -140,12 +140,14 @@ h1 {
     mix-blend-mode: linear_dodge;
 }
 
-.projectscontenttopbox p {
+.projectscontenttopbox2 p {
     align-self: flex-end;
+    text-align: right;
 }
 
-.projectscontenttopbox img {
-    max-width: 100%;
+.projectscontenttopbox2 img {
+    width: 100%;
+
     /* prevents overflow */
     height: auto;
     /* maintain aspect ratio */

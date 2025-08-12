@@ -1,19 +1,23 @@
 import styles from "./Astra.module.css";
 
+import astraBg from "./assets/astrabg2.png";
+
 import satelliteIcon from "./assets/satellite.svg";
 import researcherIcon from "./assets/researcher.svg";
 import astronautIcon from "./assets/astronaut.svg";
 
 import Footer from "./footer.tsx";
+import ProjectsHeader from "./components/ProjectHeader.tsx";
 
 export default function Astra() {
   return (
     <>
       <div className={styles.astraprojectcontainer}>
-        <div className={styles.header}>
-          <h1>ASTRA</h1>
-          <p>Adaptive Signal Transmission and Real-time Analytics</p>
-        </div>
+        <ProjectsHeader
+          title="ASTRA"
+          subtitle="Adaptive Signal Transmission and Real-time Analytics"
+          backgroundImage={astraBg}
+        />
         <div className={styles.intro}>
           <div className={styles.introleft}>
             <p>

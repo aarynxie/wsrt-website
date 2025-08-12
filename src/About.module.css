@@ -92,6 +92,10 @@
     text-align: center;
 }
 
+.members h3 {
+    margin: 1rem 0;
+}
+
 @media (min-width: 1000px) {
     .title {
         padding: 2rem 8rem;
